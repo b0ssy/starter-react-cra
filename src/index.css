@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Custom styles */
+@layer base {
+  body, .background {
+    @apply bg-base-100 dark:bg-black;
+  }
+  
+  .header {
+    @apply bg-white dark:bg-black;
+  }
+  
+  .paper {
+    @apply bg-white dark:bg-base-900 dark:ring-2 dark:ring-base-800 shadow-md rounded-xl;
+  }
+
+  .modal {
+    @apply dark:bg-base-800;
+  }
+  
+  .divider {
+    @apply h-px bg-base-400 dark:bg-base-600;
+  }
+  .divider-border {
+    @apply border border-base-400 dark:border-base-600;
+  }
+  
+  .text {
+    @apply text-black dark:text-white;
+  }
+  .text-dim {
+    @apply text-base-900 dark:text-base-300;
+  }
+  .text-disabled {
+    @apply text-base-500 dark:text-base-400;
+  }
+  .text-error {
+    @apply text-error-400;
+  }
+  
+  .input {
+    @apply p-2 rounded-lg bg-base-50 dark:bg-base-700 dark:text-base-50 ring-1 ring-base-300 dark:ring-base-600 enabled:hover:ring-base-400 enabled:hover:dark:ring-base-500 enabled:focus:ring-base-400 enabled:focus:dark:ring-base-500 focus:outline-none disabled:bg-white disabled:text-disabled;
+  }
+  .input-error {
+    @apply p-2 rounded-lg bg-base-50 dark:bg-base-700 dark:text-base-50 ring-1 ring-error-400 dark:ring-error-400 enabled:hover:ring-error-500 enabled:hover:dark:ring-error-500 enabled:focus:ring-error-500 enabled:focus:dark:ring-error-500 focus:outline-none disabled:bg-white disabled:text-disabled;
+  }
+
+  .icon {
+    @apply dark:text-white;
+  }
+}
